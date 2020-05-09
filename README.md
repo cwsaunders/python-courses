@@ -1,2 +1,2 @@
 # python-courses
-Python Courses by University of Michigan.
+Python Courses by the University of Michigan.
