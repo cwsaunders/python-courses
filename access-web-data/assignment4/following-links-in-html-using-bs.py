@@ -12,6 +12,13 @@ html = urllib.request.urlopen(url, context=ctx).read()
 soup = BeautifulSoup(html, 'html.parser')
 
 # Retrieve all of the anchor tags
-tags = soup('a')
-for tag in tags:
-    print(tag.get('href', None))
+for i in range(7):
+    tags = soup('a')
+    for j in range(len(tags)):
+        eighteen = tags[j].get('href', None)
+        if j==17:
+            url = eighteen
+            html = urllib.request.urlopen(url, context=ctx).read()
+            soup = BeautifulSoup(html, 'html.parser')
+            if i == 6:
+                print(tags[17].text)
